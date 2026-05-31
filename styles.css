@@ -1,0 +1,410 @@
+/* =========================================================
+   VLAD BORZYK · vladborzyk.com
+   Editorial / museum-tag aesthetic
+   Brand System v2.0 — EB Garamond + IBM Plex Mono + SIENNA
+   ========================================================= */
+
+/* ---- CSS VARIABLES — бренд-палитра ---- */
+:root {
+  --paper:    #FAF6EA;
+  --ink:      #120E08;
+  --muted:    #827860;
+  --hair:     #C8BCA2;
+  --sienna:   #7A4A2A;
+
+  --serif:    'EB Garamond', Georgia, serif;
+  --mono:     'IBM Plex Mono', 'Courier New', monospace;
+  --display:  'EB Garamond', Georgia, serif;
+
+  --max-w:    920px;
+  --gutter:   clamp(1.25rem, 4vw, 3rem);
+
+  --transition-soft: 600ms cubic-bezier(0.22, 1, 0.36, 1);
+  --transition-snap: 280ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ---- RESET ---- */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }       /* (3) SMOOTH SCROLL */
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---- BRAND STRIPE — sienna полоска с визитки ---- */
+.brand-stripe {
+  position: fixed;
+  top: 0;
+  left: clamp(12px, 2vw, 28px);
+  width: 3px;
+  height: 100%;
+  background: var(--sienna);
+  z-index: 10;
+  /* Появление при загрузке */
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: top;
+  animation: stripeReveal 1100ms cubic-bezier(0.22, 1, 0.36, 1) 200ms forwards;
+}
+
+@keyframes stripeReveal {
+  to { opacity: 1; transform: scaleY(1); }
+}
+
+/* ---- LAYOUT ---- */
+main {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: clamp(3rem, 8vw, 6rem) var(--gutter) 0;
+}
+
+section {
+  padding-block: clamp(2.5rem, 6vw, 4.5rem);
+  border-bottom: 1px solid var(--hair);
+}
+section:last-of-type { border-bottom: none; }
+
+/* ---- HERO: видно всегда, лёгкое появление без opacity:0 ---- */
+.hero .kicker,
+.hero .name,
+.hero .tagline {
+  animation: heroSettle 900ms cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+.hero .kicker  { animation-delay: 100ms; }
+.hero .name    { animation-delay: 250ms; }
+.hero .tagline { animation-delay: 400ms; }
+
+@keyframes heroSettle {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---- SECTION LABELS ---- */
+.section-label {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  color: var(--sienna);
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+}
+
+/* ---- HERO ---- */
+.hero {
+  padding-top: clamp(1.5rem, 4vw, 3rem);
+  border-bottom: 1px solid var(--hair);
+}
+
+.kicker {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.6rem;
+}
+.kicker .hairline {
+  flex: 1;
+  height: 1px;
+  background: var(--ink);
+  max-width: 220px;
+}
+
+.name {
+  font-family: var(--display);
+  font-size: clamp(2.4rem, 8vw, 4.2rem);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin: 0.2rem 0 0.5rem;
+  color: var(--ink);
+  line-height: 1.05;
+}
+
+.tagline {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: var(--ink);
+  margin: 0;
+}
+
+/* ---- BIO ---- */
+.bio p {
+  margin: 0 0 1rem;
+  max-width: 64ch;
+}
+.bio em { font-style: italic; color: var(--ink); }
+
+/* ---- WORKS ---- */
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);    /* 3 в ряд на десктопе */
+  gap: clamp(1.5rem, 4vw, 2.5rem);
+  margin-top: 0.5rem;
+}
+
+/* На планшете — 2 в ряд */
+@media (max-width: 800px) {
+  .works-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* На телефоне — 1 в столбец */
+@media (max-width: 500px) {
+  .works-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.work {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* (4) HOVER LIFT + (4b) SLOW ZOOM */
+.work-image {
+  overflow: hidden;
+  background: var(--paper);
+  aspect-ratio: 1 / 1;       /* квадрат — лучший компромисс для разных пропорций */
+  border: 1px solid var(--hair);
+  transition: transform var(--transition-soft),
+              box-shadow var(--transition-soft);
+  will-change: transform;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.work-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 1400ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+.work:hover .work-image {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px -10px rgba(18, 14, 8, 0.22);
+}
+.work:hover .work-image img {
+  transform: scale(1.05);
+}
+
+/* WORKS: show paintings whole, no crop (teaching strip keeps square) */
+.works .work-image {
+  aspect-ratio: auto;
+  display: block;
+}
+.works .work-image img {
+  height: auto;
+}
+
+figcaption {
+  padding-top: 0.9rem;
+}
+
+.work-title {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.05rem;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+}
+.work-meta {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  margin-top: 0.3rem;
+}
+
+.gallery-note {
+  margin-top: 2.5rem;
+  font-style: italic;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+/* ---- TEACHING ---- */
+.teaching p { max-width: 60ch; margin: 0 0 0.8rem; }
+.teaching-cta { font-style: italic; color: var(--ink); margin-top: 1.6rem; }
+
+/* TEACHING photo strip — reuses .work / .work-image card pattern */
+.teaching-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.25rem, 4vw, 2.5rem);
+  margin: 1.6rem 0 0.5rem;
+}
+@media (max-width: 500px) {
+  .teaching-grid { grid-template-columns: 1fr; }
+}
+
+/* ---- CONTACT ---- */
+.contact-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+.contact-row {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  align-items: baseline;
+  gap: 1rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid var(--hair);
+}
+.contact-label {
+  font-family: var(--mono);
+  font-weight: 500;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  color: var(--sienna);
+}
+.contact-value {
+  font-family: var(--mono);
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+}
+.contact-note {
+  font-style: italic;
+  color: var(--muted);
+  font-size: 0.95rem;
+  max-width: 56ch;
+}
+
+/* ---- LINKS ---- */
+a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--sienna);
+  transition: color var(--transition-snap),
+              border-color var(--transition-snap);
+}
+a:hover {
+  color: var(--sienna);
+  border-color: var(--ink);
+}
+
+/* ---- FOOTER ---- */
+footer {
+  padding-block: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  align-items: flex-start;
+}
+.footer-lockup {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+.vb {
+  font-family: var(--display);
+  font-size: 1.2rem;
+  color: var(--ink);
+  letter-spacing: 0.04em;
+}
+.vb .dot {
+  color: var(--sienna);
+  font-weight: bold;
+  margin: 0 0.15em;
+}
+.footer-tag {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--muted);
+  padding-left: 0.9rem;
+  border-left: 1px solid var(--hair);
+}
+.footer-copyright {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+/* ---- (1) FADE-IN ON SCROLL + (5) STAGGERED ENTRANCE детей ----
+   Progressive enhancement: секции видны по умолчанию,
+   JS добавляет класс .js-loaded на body, и только тогда применяется fade-in.
+   Это гарантирует что без JS / при ошибках контент всегда виден. */
+@media (prefers-reduced-motion: no-preference) {
+  body.js-loaded .reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 900ms cubic-bezier(0.22, 1, 0.36, 1),
+                transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  body.js-loaded .reveal-on-scroll.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Stagger детей */
+  body.js-loaded .reveal-on-scroll > * {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
+                transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  body.js-loaded .reveal-on-scroll.revealed > * {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  body.js-loaded .reveal-on-scroll.revealed > *:nth-child(1) { transition-delay: 150ms; }
+  body.js-loaded .reveal-on-scroll.revealed > *:nth-child(2) { transition-delay: 280ms; }
+  body.js-loaded .reveal-on-scroll.revealed > *:nth-child(3) { transition-delay: 400ms; }
+  body.js-loaded .reveal-on-scroll.revealed > *:nth-child(4) { transition-delay: 520ms; }
+  body.js-loaded .reveal-on-scroll.revealed > *:nth-child(5) { transition-delay: 640ms; }
+
+  /* Внутри works-grid тоже stagger карточек */
+  body.js-loaded .works.revealed .works-grid .work {
+    opacity: 0;
+    transform: translateY(16px);
+    animation: cardEnter 900ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+  body.js-loaded .works.revealed .works-grid .work:nth-child(1) { animation-delay: 350ms; }
+  body.js-loaded .works.revealed .works-grid .work:nth-child(2) { animation-delay: 500ms; }
+  body.js-loaded .works.revealed .works-grid .work:nth-child(3) { animation-delay: 650ms; }
+  body.js-loaded .works.revealed .works-grid .work:nth-child(4) { animation-delay: 800ms; }
+  body.js-loaded .works.revealed .works-grid .work:nth-child(5) { animation-delay: 950ms; }
+  body.js-loaded .works.revealed .works-grid .work:nth-child(6) { animation-delay: 1100ms; }
+  body.js-loaded .works.revealed .works-grid .work:nth-child(7) { animation-delay: 1250ms; }
+
+  @keyframes cardEnter {
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
+
+/* ---- ACCESSIBILITY: respect user preferences ---- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ---- RESPONSIVE: телефон ---- */
+@media (max-width: 600px) {
+  .brand-stripe { left: 8px; width: 2px; }
+  main { padding-left: clamp(1.5rem, 6vw, 2rem); padding-right: 1.25rem; }
+  .contact-row { grid-template-columns: 90px 1fr; gap: 0.8rem; }
+  .footer-tag { padding-left: 0; border-left: none; }
+  .footer-lockup { flex-direction: column; align-items: flex-start; gap: 0.3rem; }
+}
