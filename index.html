@@ -1,249 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vlad Borzyk · Oil Painter · Grand Bend, Ontario</title>
-  <meta name="description" content="Vlad Borzyk — Ukrainian-Canadian oil painter based in Grand Bend, Ontario. Available works at Sunset Arts Gallery. Art teacher at South Huron Arts Centre, Exeter.">
-
-  <!-- Google Fonts: EB Garamond + IBM Plex Mono (Brand System v2.0) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Vlad Borzyk · Oil Painter · Grand Bend, Ontario</title>
+<meta name="description" content="Vlad Borzyk — Ukrainian-Canadian oil &amp; acrylic painter on Lake Huron, near Grand Bend, Ontario. Original landscapes and still lifes, available at Sunset Arts Gallery. Painting workshops at South Huron Arts Centre, Exeter.">
+<meta property="og:title" content="Vlad Borzyk · Oil Painter · Grand Bend, Ontario">
+<meta property="og:description" content="Original oil &amp; acrylic paintings of Lake Huron and Ontario. Available at Sunset Arts Gallery. Workshops in Exeter.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://vladborzyk.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<noscript><style>.reveal{opacity:1;transform:none}.fab{display:none}</style></noscript>
 </head>
 <body>
+<span class="edge" aria-hidden="true"><span class="fill" id="edgeFill"></span></span>
 
-<!-- Вертикальная sienna полоска слева (бренд-элемент с визитки) -->
-<div class="brand-stripe"></div>
+<!-- ===== HEADER ===== -->
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <a href="#top" class="brand"><span class="vb">V·B</span>VLAD BORZYK</a>
+    <nav><ul class="menu">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#teaching">Teaching</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul></nav>
+  </div>
+</header>
 
-<main>
-
-  <!-- HERO: Имя + tagline + EST -->
-  <section class="hero">
-    <div class="kicker">
-      ARTIST&nbsp;&nbsp;·&nbsp;&nbsp;INSTRUCTOR
-      <span class="hairline"></span>
+<!-- ===== HERO ===== -->
+<section class="hero" id="top">
+  <div class="dots" id="dots" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="eyebrow"><span class="line"></span>ARTIST&nbsp;&nbsp;·&nbsp;&nbsp;INSTRUCTOR<span class="line"></span></div>
+    <h1><span class="word">VLAD</span> <span class="word">BORZYK</span></h1>
+    <p class="tag">Oil Painter &amp; Art Teacher&nbsp;&nbsp;·&nbsp;&nbsp;Grand Bend, Ontario</p>
+    <p class="lede">Landscapes of Lake Huron and warm still lifes in oil and acrylic — and small painting classes by the water.</p>
+    <div class="cta">
+      <a href="#work" class="btn solid">View the work</a>
+      <a href="#teaching" class="btn outline">Join a class</a>
     </div>
-    <h1 class="name">VLAD BORZYK</h1>
-    <p class="tagline">Oil Painter &amp; Art Teacher&nbsp;&nbsp;·&nbsp;&nbsp;Grand Bend, Ontario</p>
-  </section>
+  </div>
+</section>
 
-  <!-- BIO -->
-  <section class="bio reveal-on-scroll">
-    <div class="section-label">ABOUT</div>
-    <p>
-      Born and trained in Odesa, Ukraine. Graduated from K. D. Ushinsky University,
-      Faculty of Art and Graphics — diploma project a Byzantine mosaic icon,
-      <em>Mother of God of Tenderness</em> (Eleusa), executed in smalti, stained glass,
-      and fired ceramic tesserae. During and after my studies I worked alongside
-      and studied with painters of the Odesa school, and taught for two years
-      at the Kostandi Art School for Children, Odesa.
-    </p>
-    <p>
-      Fifteen years of professional mosaic work followed — across Ukraine, Moldova,
-      and Romania — church apses, icons, monumental installations.
-      Two pieces are fully my own from sketch to finished work: the diploma <em>Eleusa</em>
-      and a mosaic portrait of the Odesa painter Kiriak Kostandi. The rest was
-      workshop execution of other artists' designs — the slow, patient craft of
-      laying tesserae one by one.
-    </p>
-    <p>
-      Today on the shores of Lake Huron, the work is painterly — warm naturalistic
-      still lifes and Ontario landscapes. Both practices, brush and smalti,
-      continue side by side.
-    </p>
-  </section>
-
-  <!-- WORKS: 4 картины -->
-  <section class="works reveal-on-scroll">
-    <div class="section-label">SELECTED WORKS</div>
-
-    <div class="works-grid">
-
-      <figure class="work">
-        <div class="work-image">
-          <img src="images/lake_in_fall.jpg" alt="The Lake in Fall — oil on canvas, 18 × 24 inches, autumn forest reflected in still water">
-        </div>
-        <figcaption>
-          <div class="work-title">The Lake in Fall</div>
-          <div class="work-meta">Oil on canvas&nbsp;&nbsp;·&nbsp;&nbsp;18 × 24 in</div>
-        </figcaption>
-      </figure>
-
-      <figure class="work">
-        <div class="work-image">
-          <img src="images/apple_blossom.jpg" alt="Apple Blossom Reverie — oil on canvas, 12 × 12 inches, blossoms and fruit still life">
-        </div>
-        <figcaption>
-          <div class="work-title">Apple Blossom Reverie</div>
-          <div class="work-meta">Oil on canvas&nbsp;&nbsp;·&nbsp;&nbsp;12 × 12 in</div>
-        </figcaption>
-      </figure>
-
-      <figure class="work">
-        <div class="work-image">
-          <img src="images/barn.jpg" alt="Barn — oil on canvas, 16 × 24 inches, Ontario farm under a dramatic sky">
-        </div>
-        <figcaption>
-          <div class="work-title">Barn</div>
-          <div class="work-meta">Oil on canvas&nbsp;&nbsp;·&nbsp;&nbsp;16 × 24 in</div>
-        </figcaption>
-      </figure>
-
-      <figure class="work">
-        <div class="work-image">
-          <img src="images/sun_in_a_glass.jpg" alt="Sun in a Glass — oil on canvas, citrus and grapes still life">
-        </div>
-        <figcaption>
-          <div class="work-title">Sun in a Glass</div>
-          <div class="work-meta">Oil on canvas</div>
-        </figcaption>
-      </figure>
-
-      <figure class="work">
-        <div class="work-image">
-          <img src="images/winter_forest.jpg" alt="Winter Forest — acrylic on canvas, 18 × 24 inches, snowy forest in golden light">
-        </div>
-        <figcaption>
-          <div class="work-title">Winter Forest</div>
-          <div class="work-meta">Acrylic on canvas&nbsp;&nbsp;·&nbsp;&nbsp;18 × 24 in</div>
-        </figcaption>
-      </figure>
-
-      <figure class="work">
-        <div class="work-image">
-          <img src="images/still_life_citrus.jpg" alt="Oranges and Grapes — oil on canvas, 11 × 14 inches, fruit still life on a light ground">
-        </div>
-        <figcaption>
-          <div class="work-title">Oranges and Grapes</div>
-          <div class="work-meta">Oil on canvas&nbsp;&nbsp;·&nbsp;&nbsp;11 × 14 in</div>
-        </figcaption>
-      </figure>
-
-      <figure class="work">
-        <div class="work-image">
-          <img src="images/winter_path.jpg" alt="Winter Path — oil on canvas, 11 × 14 inches, snowy trail with warm light through the trees">
-        </div>
-        <figcaption>
-          <div class="work-title">Winter Path</div>
-          <div class="work-meta">Oil on canvas&nbsp;&nbsp;·&nbsp;&nbsp;11 × 14 in</div>
-        </figcaption>
-      </figure>
-
+<!-- ===== WORK ===== -->
+<section class="work" id="work">
+  <div class="wrap">
+    <div class="stitle reveal">
+      <span class="kick">Selected work</span>
+      <h2>Paintings</h2>
+      <div class="rule"><i></i><span></span><i></i></div>
     </div>
 
-    <p class="gallery-note">
-      Available works at <a href="https://sunsetarts.info" target="_blank" rel="noopener">Sunset Arts Gallery</a>,
-      River Road, Grand Bend.
-    </p>
-  </section>
-
-  <!-- TEACHING -->
-  <section class="teaching reveal-on-scroll">
-    <div class="section-label">TEACHING</div>
-    <p>
-      Vlad teaches workshops in acrylic painting, mosaic, nature printing, and
-      mixed-media techniques — hosted at
-      <a href="https://southhuronartscentre.ca/" target="_blank" rel="noopener">South Huron Arts Centre</a>,
-      Exeter, Ontario. For adult beginners and intermediate makers;
-      every session sends you home with a finished piece.
-    </p>
-
-    <div class="teaching-grid">
-      <figure class="work">
-        <div class="work-image">
-          <img src="images/workshop_acrylic.jpg" alt="Acrylic painting workshop — a student painting an Ontario sunset forest from a reference">
-        </div>
-        <figcaption><div class="work-meta">Acrylic Painting</div></figcaption>
-      </figure>
-
-      <figure class="work">
-        <div class="work-image">
-          <img src="images/workshop_mosaic.jpg" alt="Mosaic workshop — setting glass tesserae into a small framed snowflake">
-        </div>
-        <figcaption><div class="work-meta">Mosaic</div></figcaption>
-      </figure>
-
-      <figure class="work">
-        <div class="work-image">
-          <img src="images/workshop_nature_printing.jpg" alt="Nature printing workshop — botanical leaf prints in blue and green">
-        </div>
-        <figcaption><div class="work-meta">Nature Printing</div></figcaption>
-      </figure>
+    <div class="filters reveal">
+      <button class="on" data-filter="all">All</button>
+      <button data-filter="available">Available</button>
+      <button data-filter="sold">Sold</button>
     </div>
 
-    <p class="teaching-cta">
-      Current schedule &amp; registration&nbsp;→&nbsp;<a href="https://southhuronartscentre.ca/" target="_blank" rel="noopener">South Huron Arts Centre</a>.
-    </p>
-  </section>
+    <div class="grid" id="grid">
+      <!-- cards injected here -->
+    </div>
 
-  <!-- CONTACT -->
-  <section class="contact reveal-on-scroll">
-    <div class="section-label">CONTACT</div>
+    <p class="gnote reveal">Original works are shown at
+      <a href="https://sunsetarts.info" target="_blank" rel="noopener">Sunset Arts Gallery</a>,
+      River Road, Grand Bend. To enquire about an available piece, send a message on
+      <a href="https://instagram.com/lnkame" target="_blank" rel="noopener">Instagram</a> or by email.</p>
+  </div>
+</section>
 
-    <div class="contact-rows">
-      <div class="contact-row">
-        <div class="contact-label">INSTAGRAM</div>
-        <div class="contact-value">
-          <a href="https://instagram.com/lnkame" target="_blank" rel="noopener">@lnkame</a>
-        </div>
-      </div>
+<!-- ===== TEACHING ===== -->
+<section class="teaching" id="teaching">
+  <div class="wrap">
+    <div class="stitle reveal">
+      <span class="kick" style="color:var(--gold-light)">Teaching · Exeter, Ontario</span>
+      <h2 style="color:var(--paper)">Small classes by the water</h2>
+      <div class="rule"><i></i><span></span><i></i></div>
+    </div>
+    <p class="teach-intro reveal">Workshops at the South Huron Arts Centre in Exeter, in three directions —
+      for adult beginners and improvers. Relaxed, patient, all materials provided, and built so
+      every session sends you home with a finished piece.</p>
 
-      <div class="contact-row">
-        <div class="contact-label">EMAIL</div>
-        <div class="contact-value">
-          <a href="mailto:inkamme@gmail.com">inkamme@gmail.com</a>
-        </div>
+    <div class="teach-grid reveal">
+      <article class="teach-card">
+        <button class="t-photo" data-gallery="mosaic" aria-label="View mosaic class photos">
+          <img src="images/teaching/mosaic_detail.jpg" alt="A student's snowflake mosaic in smalti taking shape in a wooden frame" loading="lazy">
+          <span class="t-hint">View photos<span class="t-count">3</span></span>
+        </button>
+        <span class="t-num">01</span>
+        <h3>Mosaic</h3>
+        <p>Byzantine and contemporary mosaic in smalti and ceramic — the craft behind fifteen years
+          of icon and church work, taught one tessera at a time.</p>
+      </article>
+      <article class="teach-card">
+        <button class="t-photo" data-gallery="leaf" aria-label="View leaf printing and mixed-media class photos">
+          <img src="images/teaching/leaf_class.jpg" alt="Leaf printing and mixed-media workshop in progress" loading="lazy">
+          <span class="t-hint">View photos<span class="t-count">4</span></span>
+        </button>
+        <span class="t-num">02</span>
+        <h3>Leaf Printing &amp; Mixed Media</h3>
+        <p>Nature printing with real leaves and plants, layered with acrylic and texture —
+          playful, forgiving, and full of small surprises.</p>
+      </article>
+      <article class="teach-card">
+        <button class="t-photo" data-gallery="acrylic" aria-label="View acrylic painting class photos">
+          <img src="images/teaching/acrylic_studio.jpg" alt="Adult students painting Lake Huron sunsets at a South Huron Arts Centre workshop" loading="lazy">
+          <span class="t-hint">View photos<span class="t-count">4</span></span>
+        </button>
+        <span class="t-num">03</span>
+        <h3>Acrylic Painting</h3>
+        <p>Lake Huron sunsets, forests, and still lifes in acrylic — colour, light, and a little
+          confidence for first-time painters.</p>
+      </article>
+    </div>
+
+    <div class="teach-cta reveal">
+      <p>Workshop dates, fees, and sign-up are handled through SHAC — new sessions are posted through the season.</p>
+      <a href="https://southhuronartscentre.ca/" target="_blank" rel="noopener" class="btn gold">Schedule &amp; registration</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="portrait reveal"><img src="images/portrait.jpg" alt="Vlad Borzyk, painter, on the Lake Huron shore" loading="lazy"></div>
+      <div class="reveal">
+        <span class="kick">About the artist</span>
+        <h2>Vladyslav Borzyk</h2>
+        <p>Born and trained in Odesa, Ukraine. I graduated from K. D. Ushinsky University,
+          Faculty of Art and Graphics — my diploma project a Byzantine mosaic icon,
+          <em>Mother of God of Tenderness</em>, in smalti and fired ceramic. For two years
+          I taught at the Kostandi Art School for Children in Odesa.</p>
+        <p>Fifteen years of professional mosaic work followed, across Ukraine, Moldova, and
+          Romania — church apses, icons, and monumental installations, laid one tessera at a time.
+          Painting and mosaic have run side by side throughout — brush and smalti, two materials,
+          one practice.</p>
+        <p>Today, on the shores of Lake Huron near Grand Bend, the work is painterly: warm,
+          naturalistic still lifes and Ontario landscapes in oil and acrylic. Originals show at
+          Sunset Arts Gallery in Grand Bend, and I teach painting classes in Exeter.</p>
       </div>
     </div>
+  </div>
+</section>
 
-    <p class="contact-note">
-      For commission inquiries — pet portraits and custom work —
-      please send a direct message on Instagram or write by email.
-    </p>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-lockup">
-      <span class="vb">V<span class="dot">·</span>B</span>
-      <span class="footer-tag">Oil Painter&nbsp;&nbsp;·&nbsp;&nbsp;Grand Bend</span>
+<!-- ===== CONTACT ===== -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="stitle reveal">
+      <span class="kick">Get in touch</span>
+      <h2>Contact</h2>
+      <div class="rule"><i></i><span></span><i></i></div>
     </div>
-    <div class="footer-copyright">
-      © 2026 Vlad Borzyk. All works and images are the property of the artist.
+    <div class="crows reveal">
+      <div class="crow"><span class="l">Instagram</span><span class="v"><a href="https://instagram.com/lnkame" target="_blank" rel="noopener">@lnkame</a></span></div>
+      <div class="crow"><span class="l">Facebook</span><span class="v"><a href="https://www.facebook.com/vladborzyk/" target="_blank" rel="noopener">Vlad Borzyk Fine Art</a></span></div>
+      <div class="crow"><span class="l">Email</span><span class="v"><a href="mailto:inkamme@gmail.com">inkamme@gmail.com</a></span></div>
+      <div class="crow"><span class="l">Gallery</span><span class="v"><a href="https://sunsetarts.info" target="_blank" rel="noopener">Sunset Arts, Grand Bend</a></span></div>
     </div>
-  </footer>
+    <p class="cnote reveal">For commissions — pet portraits and custom work — send a direct message on
+      Instagram or write by email, and I'll reply within a few days.</p>
+  </div>
+</section>
 
-</main>
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="foot">
+    <div class="lockup"><span class="vb">V·B</span><span class="ft">Oil Painter&nbsp;·&nbsp;Grand Bend</span></div>
+    <span class="cc">© 2026 Vlad Borzyk · All works are the property of the artist</span>
+  </div>
+</footer>
 
-<!-- Scroll reveal — нативный Intersection Observer, без библиотек.
-     Progressive enhancement: только если JS работает, добавляется .js-loaded
-     и начинают применяться стили скрытия + анимация появления. -->
-<script>
-  (function() {
-    document.body.classList.add('js-loaded');
+<!-- ===== SIDE DOT NAV ===== -->
+<nav class="dotnav" id="dotnav" aria-label="Section navigation"></nav>
 
-    const els = document.querySelectorAll('.reveal-on-scroll');
-    if (!('IntersectionObserver' in window) || els.length === 0) {
-      // Старый браузер — сразу показать всё
-      els.forEach(el => el.classList.add('revealed'));
-      return;
-    }
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('revealed');
-          io.unobserve(entry.target);
-        }
-      });
-    }, { rootMargin: '0px 0px 0px 0px', threshold: 0.05 });
+<!-- ===== FLOATING CONTACT BUTTON ===== -->
+<a href="#contact" class="fab" id="fab"><span class="dot"></span>Get in touch</a>
 
-    els.forEach(el => io.observe(el));
-  })();
-</script>
+<!-- ===== LIGHTBOX ===== -->
+<div class="lb" id="lb" aria-hidden="true">
+  <button class="lb-close" id="lbClose" aria-label="Close">✕</button>
+  <div class="lb-in">
+    <div class="lb-img"><img id="lbImg" src="" alt=""></div>
+    <div class="lb-meta">
+      <span class="kick">Original painting</span>
+      <h3 id="lbTitle"></h3>
+      <div class="m" id="lbMeta"></div>
+      <div class="p" id="lbPrice"></div>
+      <p class="desc" id="lbDesc"></p>
+      <a class="btn" id="lbBtn" href="https://instagram.com/lnkame" target="_blank" rel="noopener">Message to enquire</a>
+    </div>
+  </div>
+</div>
 
+<!-- ===== TEACHING GALLERY ===== -->
+<div class="tgal" id="tgal" aria-hidden="true">
+  <button class="tgal-close" id="tgalClose" aria-label="Close">✕</button>
+  <button class="tgal-nav tgal-prev" id="tgalPrev" aria-label="Previous">‹</button>
+  <figure class="tgal-fig">
+    <img id="tgalImg" src="" alt="">
+    <figcaption><span id="tgalCap"></span><span class="tgal-count" id="tgalNum"></span></figcaption>
+  </figure>
+  <button class="tgal-nav tgal-next" id="tgalNext" aria-label="Next">›</button>
+</div>
+
+<script src="app.js"></script>
 </body>
 </html>
