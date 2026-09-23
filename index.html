@@ -35,17 +35,36 @@
 <!-- ===== HERO ===== -->
 <section class="hero" id="top">
   <div class="dots" id="dots" aria-hidden="true"></div>
-  <div class="wrap">
+  <div class="wrap hero-layout">
+    <div class="hero-copy">
     <div class="eyebrow"><span class="line"></span>ARTIST&nbsp;&nbsp;·&nbsp;&nbsp;INSTRUCTOR<span class="line"></span></div>
     <h1><span class="word">VLAD</span> <span class="word">BORZYK</span></h1>
     <p class="tag">Oil Painter &amp; Art Teacher&nbsp;&nbsp;·&nbsp;&nbsp;Grand Bend, Ontario</p>
-    <p class="lede">Landscapes of Lake Huron and warm still lifes in oil and acrylic — and small painting classes by the water.</p>
+    <p class="lede">Still lifes and Lake Huron landscapes in oil and acrylic. Art classes in Exeter, Ontario.</p>
     <div class="cta">
       <a href="#work" class="btn solid">View the work</a>
       <a href="#teaching" class="btn outline">Join a class</a>
     </div>
+    </div>
+    <figure class="hero-art">
+      <button type="button" id="featuredPainting" aria-label="View Winter Forest">
+        <img src="images/winter_forest.jpg" width="1500" height="1112" alt="Winter Forest — golden light between snow-covered pines" fetchpriority="high">
+      </button>
+      <figcaption>Winter Forest <span>Acrylic on canvas · Original sold · Print available</span></figcaption>
+    </figure>
   </div>
 </section>
+
+<aside class="gallery-visit wrap" aria-label="Where to see my work">
+  <div><span class="kick">See the work in person</span>
+    <h2>Sunset Arts Gallery</h2>
+    <p>63 River Road, Grand Bend, Ontario.<br>All originals marked Available are at Sunset Arts. Prints of Barn, Winter Forest and The Lake in Fall are also available at the gallery.</p>
+  </div>
+  <div class="gallery-links">
+    <a href="https://sunsetarts.info" target="_blank" rel="noopener">Gallery information &amp; hours ↗</a>
+    <a href="#contact">Ask about a work</a>
+  </div>
+</aside>
 
 <!-- ===== WORK ===== -->
 <section class="work" id="work">
@@ -62,14 +81,16 @@
       <button data-filter="sold">Sold</button>
     </div>
 
-    <div class="grid" id="grid">
+    <p class="catalog-key">Filters show original availability. Print options are listed separately.</p>
+    <div id="grid">
       <!-- cards injected here -->
     </div>
 
-    <p class="gnote reveal">Original works are shown at
+    <p class="gnote reveal">Find my work at
       <a href="https://sunsetarts.info" target="_blank" rel="noopener">Sunset Arts Gallery</a>,
-      River Road, Grand Bend. To enquire about an available piece, send a message on
-      <a href="https://instagram.com/lnkame" target="_blank" rel="noopener">Instagram</a> or by email.</p>
+      63 River Road, Grand Bend. Available originals and the three prints marked Print available are at the gallery. For questions about a painting or print,
+      <a href="mailto:inkamme@gmail.com">email me</a> or
+      <a href="https://www.facebook.com/vladborzyk/" target="_blank" rel="noopener">contact me on Facebook</a>.</p>
   </div>
 </section>
 
@@ -78,49 +99,63 @@
   <div class="wrap">
     <div class="stitle reveal">
       <span class="kick" style="color:var(--gold-light)">Teaching · Exeter, Ontario</span>
-      <h2 style="color:var(--paper)">Small classes by the water</h2>
+      <h2 style="color:var(--paper)">Art classes in Exeter</h2>
       <div class="rule"><i></i><span></span><i></i></div>
     </div>
-    <p class="teach-intro reveal">Workshops at the South Huron Arts Centre in Exeter, in three directions —
-      for adult beginners and improvers. Relaxed, patient, all materials provided, and built so
-      every session sends you home with a finished piece.</p>
+    <p class="teach-intro reveal">Learn oil painting, acrylic painting, mosaic and botanical mixed media
+      with me at the South Huron Arts Centre in Exeter. Explore materials and techniques with
+      step-by-step guidance. Choose a class below to view its details and register directly with SHAC.</p>
 
-    <div class="teach-grid reveal">
-      <article class="teach-card">
+    <div class="teach-grid">
+    <article class="teach-card reveal">
+      <div class="course-poster"><img src="images/teaching/old_masters_poster_v2.png" alt="Old Masters oil workshop poster: still life with a clay jug, candle and painting materials" loading="lazy"></div>
+      <span class="t-num">01</span>
+      <h3>The Old Masters Method · Oil Glazing</h3>
+      <p>Build a small still life through an underpainting and transparent oil glazes, with step-by-step guidance.</p>
+      <p>October 21, 28 &amp; November 4, 2026 · 6–8 pm · $118 CAD<br>SHAC, 42 James Street, Exeter · Materials included</p>
+      <a class="btn gold" href="https://southhuronartscentre.ca/programs/ola/services/the-old-masters-method-oil-glazing-wed-oct-21-28-nov-4-6-8pm-3-weeks" target="_blank" rel="noopener" aria-label="Register at SHAC for Old Masters Oil Glazing">Register at SHAC</a>
+    </article>
+      <article class="teach-card reveal">
         <button class="t-photo" data-gallery="mosaic" aria-label="View mosaic class photos">
-          <img src="images/teaching/mosaic_detail.jpg" alt="A student's snowflake mosaic in smalti taking shape in a wooden frame" loading="lazy">
+          <img src="images/teaching/mosaic_poster_v3.png" alt="Mosaic workshop poster: a geometric tile in turquoise and cream" loading="lazy">
           <span class="t-hint">View photos<span class="t-count">3</span></span>
         </button>
-        <span class="t-num">01</span>
-        <h3>Mosaic</h3>
-        <p>Byzantine and contemporary mosaic in smalti and ceramic — the craft behind fifteen years
-          of icon and church work, taught one tessera at a time.</p>
-      </article>
-      <article class="teach-card">
-        <button class="t-photo" data-gallery="leaf" aria-label="View leaf printing and mixed-media class photos">
-          <img src="images/teaching/leaf_class.jpg" alt="Leaf printing and mixed-media workshop in progress" loading="lazy">
-          <span class="t-hint">View photos<span class="t-count">4</span></span>
-        </button>
         <span class="t-num">02</span>
-        <h3>Leaf Printing &amp; Mixed Media</h3>
-        <p>Nature printing with real leaves and plants, layered with acrylic and texture —
-          playful, forgiving, and full of small surprises.</p>
+        <h3>Mosaic</h3>
+        <p>Explore geometric patterns with ceramic tiles. Arrange colour and shape into a decorative
+          mosaic, with step-by-step guidance.</p>
+        <p class="course-date">Mediterranean Mosaic · November 14, 2026<br>1–5 pm · $86 CAD</p>
+        <a class="btn gold" href="https://southhuronartscentre.ca/programs/ola/services/mediterranean-mosaic-mixed-materials-sat-nov-15th-1-5pm-one-afternoon" target="_blank" rel="noopener" aria-label="Register at SHAC for Mediterranean Mosaic">Register at SHAC</a>
       </article>
-      <article class="teach-card">
-        <button class="t-photo" data-gallery="acrylic" aria-label="View acrylic painting class photos">
-          <img src="images/teaching/acrylic_studio.jpg" alt="Adult students painting Lake Huron sunsets at a South Huron Arts Centre workshop" loading="lazy">
+      <article class="teach-card reveal">
+        <button class="t-photo" data-gallery="leaf" aria-label="View leaf printing and mixed-media class photos">
+          <img src="images/teaching/pressed_autumn_poster_v2.png" alt="Pressed Autumn workshop poster: botanical printing with autumn leaves" loading="lazy">
           <span class="t-hint">View photos<span class="t-count">4</span></span>
         </button>
         <span class="t-num">03</span>
+        <h3>Leaf Printing &amp; Mixed Media</h3>
+        <p>Nature printing with real leaves and plants, layered with acrylic and texture —
+          playful, forgiving, and full of small surprises.</p>
+        <p class="course-date">Pressed Autumn · October 24, 2026<br>1–5 pm · $86 CAD</p>
+        <a class="btn gold" href="https://southhuronartscentre.ca/programs/ola/services/pressed-autumn-botanical-mixed-media-sat-oct-24th-1-5pm-one-afternoon" target="_blank" rel="noopener" aria-label="Register at SHAC for Pressed Autumn">Register at SHAC</a>
+        <a href="https://www.facebook.com/events/3075404042648292/" target="_blank" rel="noopener">Pressed Autumn on Facebook ↗</a>
+      </article>
+      <article class="teach-card reveal">
+        <button class="t-photo" data-gallery="acrylic" aria-label="View acrylic painting class photos">
+          <img src="images/teaching/waters_poster_v3.png" alt="Lake Huron painting workshop poster: reflections and autumn colour" loading="lazy">
+          <span class="t-hint">View photos<span class="t-count">4</span></span>
+        </button>
+        <span class="t-num">04</span>
         <h3>Acrylic Painting</h3>
         <p>Lake Huron sunsets, forests, and still lifes in acrylic — colour, light, and a little
           confidence for first-time painters.</p>
+        <p class="course-date">Waters of Lake Huron · November 21, 2026<br>1–5 pm · $86 CAD</p>
+        <a class="btn gold" href="https://southhuronartscentre.ca/programs/ola/services/acrylic-painting-waters-of-lake-huron-sat-oct-18th-1-5pm-one-afternoon" target="_blank" rel="noopener" aria-label="Register at SHAC for Waters of Lake Huron">Register at SHAC</a>
       </article>
     </div>
 
     <div class="teach-cta reveal">
-      <p>Workshop dates, fees, and sign-up are handled through SHAC — new sessions are posted through the season.</p>
-      <a href="https://southhuronartscentre.ca/" target="_blank" rel="noopener" class="btn gold">Schedule &amp; registration</a>
+      <p>All times are local to Exeter, Ontario. Each registration button opens that specific class at SHAC. Registration and payment are handled by SHAC.</p>
     </div>
   </div>
 </section>
@@ -132,18 +167,18 @@
       <div class="portrait reveal"><img src="images/portrait.jpg" alt="Vlad Borzyk, painter, on the Lake Huron shore" loading="lazy"></div>
       <div class="reveal">
         <span class="kick">About the artist</span>
-        <h2>Vladyslav Borzyk</h2>
-        <p>Born and trained in Odesa, Ukraine. I graduated from K. D. Ushinsky University,
-          Faculty of Art and Graphics — my diploma project a Byzantine mosaic icon,
-          <em>Mother of God of Tenderness</em>, in smalti and fired ceramic. For two years
-          I taught at the Kostandi Art School for Children in Odesa.</p>
-        <p>Fifteen years of professional mosaic work followed, across Ukraine, Moldova, and
-          Romania — church apses, icons, and monumental installations, laid one tessera at a time.
-          Painting and mosaic have run side by side throughout — brush and smalti, two materials,
-          one practice.</p>
-        <p>Today, on the shores of Lake Huron near Grand Bend, the work is painterly: warm,
-          naturalistic still lifes and Ontario landscapes in oil and acrylic. Originals show at
-          Sunset Arts Gallery in Grand Bend, and I teach painting classes in Exeter.</p>
+        <h2>Vlad Borzyk</h2>
+        <p>I am a painter based in Exeter, near Grand Bend, Ontario. My work centres on still life
+          and the landscapes of Lake Huron, combining classical training with an impressionist
+          approach to colour, light and brushwork.</p>
+        <p>I trained at the Faculty of Art and Graphics of South Ukrainian National Pedagogical
+          University named after K. D. Ushynsky in Odesa, Ukraine, and taught drawing and painting
+          at the Kostandi Art School for Children for two years. Painting and mosaic are parallel
+          parts of my practice.</p>
+        <p>I am a member artist at Sunset Arts Gallery in Grand Bend and teach art workshops
+          at the South Huron Arts Centre in Exeter. My paintings have been included in juried
+          exhibitions in Ontario, including Paint Ontario, ART COMP and the BMFA Juried Art Show.</p>
+        <a class="btn outline" href="cv.html">View artist CV</a>
       </div>
     </div>
   </div>
@@ -157,14 +192,15 @@
       <h2>Contact</h2>
       <div class="rule"><i></i><span></span><i></i></div>
     </div>
+    <p id="enquiryContext" class="cnote" tabindex="-1" hidden></p>
     <div class="crows reveal">
       <div class="crow"><span class="l">Instagram</span><span class="v"><a href="https://instagram.com/lnkame" target="_blank" rel="noopener">@lnkame</a></span></div>
       <div class="crow"><span class="l">Facebook</span><span class="v"><a href="https://www.facebook.com/vladborzyk/" target="_blank" rel="noopener">Vlad Borzyk Fine Art</a></span></div>
       <div class="crow"><span class="l">Email</span><span class="v"><a href="mailto:inkamme@gmail.com">inkamme@gmail.com</a></span></div>
       <div class="crow"><span class="l">Gallery</span><span class="v"><a href="https://sunsetarts.info" target="_blank" rel="noopener">Sunset Arts, Grand Bend</a></span></div>
     </div>
-    <p class="cnote reveal">For commissions — pet portraits and custom work — send a direct message on
-      Instagram or write by email, and I'll reply within a few days.</p>
+    <p class="cnote reveal">For painting enquiries, email me or contact me on Facebook.
+      To join a class, use its registration button in the <a href="#teaching">Teaching section</a>.</p>
   </div>
 </section>
 
@@ -183,7 +219,7 @@
 <a href="#contact" class="fab" id="fab"><span class="dot"></span>Get in touch</a>
 
 <!-- ===== LIGHTBOX ===== -->
-<div class="lb" id="lb" aria-hidden="true">
+<div class="lb" id="lb" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="lbTitle">
   <button class="lb-close" id="lbClose" aria-label="Close">✕</button>
   <div class="lb-in">
     <div class="lb-img"><img id="lbImg" src="" alt=""></div>
@@ -193,13 +229,17 @@
       <div class="m" id="lbMeta"></div>
       <div class="p" id="lbPrice"></div>
       <p class="desc" id="lbDesc"></p>
-      <a class="btn" id="lbBtn" href="https://instagram.com/lnkame" target="_blank" rel="noopener">Message to enquire</a>
+      <a class="btn" id="lbBtn" href="mailto:inkamme@gmail.com">Enquire about this painting</a>
+      <div class="print-enquiry">
+        <p id="lbPrintStatus"></p>
+        <a class="btn" id="lbPrint" href="mailto:inkamme@gmail.com">Ask about a print</a>
+      </div>
     </div>
   </div>
 </div>
 
 <!-- ===== TEACHING GALLERY ===== -->
-<div class="tgal" id="tgal" aria-hidden="true">
+<div class="tgal" id="tgal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Workshop photos">
   <button class="tgal-close" id="tgalClose" aria-label="Close">✕</button>
   <button class="tgal-nav tgal-prev" id="tgalPrev" aria-label="Previous">‹</button>
   <figure class="tgal-fig">
@@ -212,3 +252,7 @@
 <script src="app.js"></script>
 </body>
 </html>
+
+
+
+

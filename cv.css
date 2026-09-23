@@ -1,0 +1,16 @@
+.cv-page{max-width:850px;margin:0 auto;padding:40px 24px 72px}
+.cv-page h1{font-size:clamp(2.3rem,7vw,3.6rem);line-height:1.1;margin:30px 0 12px}
+.cv-page h2{font-family:var(--mono,'IBM Plex Mono',monospace);font-size:.85rem;letter-spacing:.12em;margin:32px 0 14px}
+.cv-page p{font-size:1.13rem;line-height:1.5;margin:0 0 16px}
+.cv-page a{text-decoration:underline;text-underline-offset:4px}
+.cv-page .cv-back{font-size:1rem}
+@media print{
+  body{background:white;color:black}
+  .cv-page{max-width:none;padding:0}
+  .cv-back{display:none}
+  .cv-page h1{font-size:26pt;margin-top:0}
+  .cv-page h2{font-size:10pt;break-after:avoid}
+  .cv-page p{font-size:11pt;break-inside:avoid}
+  .cv-page a{color:black;text-decoration:none}
+  @page{margin:18mm}
+}
